@@ -1,0 +1,4 @@
+baseURL = "http://pingpongcat.com/"
+languageCode = "en-us"
+title = "Ping Pong Cat"
+theme = "lithium"
