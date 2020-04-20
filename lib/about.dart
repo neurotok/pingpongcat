@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pingpongcat/contact';
+import 'package:pingpongcat/contact.dart';
+import 'package:pingpongcat/portfolio.dart';
 
 class AboutMe extends StatelessWidget {
   @override
@@ -53,9 +54,32 @@ class AboutMe extends StatelessWidget {
                     hoverColor: Colors.transparent,
                     padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                     onPressed: () {
+                      Navigator.pushReplacement(context, 
+                      MaterialPageRoute(builder: (context) => Portfolio())
+                      );
                     },
                     child: Text(
-                      "portfolio",
+                      "porfolio",
+                      style: GoogleFonts.didactGothic(
+                        fontSize: 16,
+                        color: Color(0xFFCCCCCC),
+                        letterSpacing: 2.0,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                FlatButton(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+                    onPressed: () {
+                      Navigator.pushReplacement(context, 
+                      MaterialPageRoute(builder: (context) => Contact())
+                      );
+                    },
+                    child: Text(
+                      "contact",
                       style: GoogleFonts.didactGothic(
                         fontSize: 16,
                         color: Color(0xFFCCCCCC),
