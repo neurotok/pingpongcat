@@ -9,7 +9,7 @@ class PingPongCat extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Ping Pong Cat",
-      home: AboutMe(),
+      home: HomePage(),
     );
   }
 }

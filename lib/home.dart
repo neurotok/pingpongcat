@@ -1,5 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:pingpongcat/about.dart';
+import 'package:pingpongcat/contact.dart';
 import 'package:pingpongcat/video.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,7 +28,12 @@ class HomePage extends StatelessWidget {
                     highlightColor: Colors.transparent,
                     hoverColor: Colors.transparent,
                     padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => AboutMe())
+                      );
+
+                    },
                     child: Text(
                       "who I am ?",
                       style: GoogleFonts.didactGothic(
