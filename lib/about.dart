@@ -1,5 +1,5 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pingpongcat/contact.dart';
 import 'package:pingpongcat/portfolio.dart';
 
@@ -7,7 +7,7 @@ class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0xFF222222),
+      color: Theme.of(context).primaryColor,
       child: Row(children: <Widget>[
         Flexible(
           flex: 1,
@@ -24,36 +24,25 @@ class AboutMe extends StatelessWidget {
               ),
               Text(
                 "About me",
-                style: GoogleFonts.didactGothic(
-                  fontSize: 32,
-                  color: Color(0xFFFFFFFF),
-                  letterSpacing: 2.0,
-                  fontWeight: FontWeight.w100,
-                ),
+                style: Theme.of(context).textTheme.headline3,
               ),
               SizedBox(
                 height: 20,
               ),
-              Text(
-                "Hello, I'm Sam. I'm a theme for Hugo. I'm an extremely customizable, content-focused theme that lets you showcase your work your way. I have slick minimalist templates for list pages (such as a list of blog posts) and single pages (a page to read one blog post). You can use tags on your content, and view content by tags. I also have a simple responsive gallery built with CSS grid. It'll look great on any screen, and all you have to do is provide a folder of images. I'm built and maintained by Victoria Drake. Here's her GitHub. This page uses the default single.html template.m",
-                style: GoogleFonts.didactGothic(
-                  fontSize: 15,
-                  color: Color(0xFFCCCCCC),
-                  letterSpacing: 2.0,
-                  fontWeight: FontWeight.w100,
-                ),
-              ),
+              RichText(text: TextSpan( style: Theme.of(context).textTheme.bodyText1, children: [
+                  TextSpan(text:"My name is Marcin Zając. I graphics designer and developer from Poland with several years of experience in graphics user interfaces.\n\nCombining technology with excellent visual experience became my passion. In programming I strives for the highest standards of software engineering and graphic design gives me a vent for the artistic soul"),
+                  TextSpan(text:"My skill set:"),
+                  TextSpan(text:"SDL2",),
+                  
+              ]),),
               SizedBox(
                 height: 20,
               ),
               Container(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                 decoration: BoxDecoration(
-                      border: Border(
-
-                          top: BorderSide(
-
-                              color: Color(0xFFCCCCCC), width: 1.0))),
+                    border: Border(
+                        top: BorderSide(color: Color(0xFFCCCCCC), width: 1.0))),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -63,18 +52,12 @@ class AboutMe extends StatelessWidget {
                       hoverColor: Colors.transparent,
                       padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                       onPressed: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (context) => Portfolio()));
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Portfolio()));
                       },
-                      child: Text(
-                        "porfolio",
-                        style: GoogleFonts.didactGothic(
-                          fontSize: 16,
-                          color: Color(0xFFCCCCCC),
-                          letterSpacing: 2.0,
-                          fontWeight: FontWeight.w100,
-                        ),
-                      ),
+                      child: Text("porfolio", style: Theme.of(context).textTheme.headline5,),
                     ),
                     FlatButton(
                       splashColor: Colors.transparent,
@@ -85,15 +68,7 @@ class AboutMe extends StatelessWidget {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) => Contact()));
                       },
-                      child: Text(
-                        "contact",
-                        style: GoogleFonts.didactGothic(
-                          fontSize: 16,
-                          color: Color(0xFFCCCCCC),
-                          letterSpacing: 2.0,
-                          fontWeight: FontWeight.w100,
-                        ),
-                      ),
+                      child: Text("contact", style: Theme.of(context).textTheme.headline5,),
                     ),
                     FlatButton(
                       splashColor: Colors.transparent,
@@ -103,30 +78,15 @@ class AboutMe extends StatelessWidget {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: Text(
-                        "home",
-                        style: GoogleFonts.didactGothic(
-                          fontSize: 16,
-                          color: Color(0xFFCCCCCC),
-                          letterSpacing: 2.0,
-                          fontWeight: FontWeight.w100,
-                        ),
-                      ),
+                      child: Text("home", style: Theme.of(context).textTheme.headline5,),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 30,),
-              Text(
-                "Ping Pong Cat 2020",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.didactGothic(
-                  fontSize: 15,
-                  color: Color(0xFFCCCCCC),
-                  letterSpacing: 1.0,
-                  fontWeight: FontWeight.w100,
-                ),
+              SizedBox(
+                height: 30,
               ),
+              Text("Ping Pong Cat 2020", textAlign: TextAlign.center, style: Theme.of(context).textTheme.headline6,),
             ],
           ),
         ),

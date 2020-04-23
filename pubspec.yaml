@@ -24,7 +24,6 @@ dependencies:
   flutter:
     sdk: flutter
   video_player: ^0.10.8+1
-  google_fonts: ^0.5.0+1
   
 
 
@@ -63,10 +62,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  #fonts:
-  #   - family: Didact Gothic
-  #     fonts:
-  #       - asset: assets/font/DidactGothic-Regular.ttff
+  fonts:
+    - family: DidactGothic
+      fonts:
+        - asset: assets/font/DidactGothic-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

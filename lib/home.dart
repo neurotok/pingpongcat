@@ -1,4 +1,3 @@
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:pingpongcat/about.dart';
 import 'package:pingpongcat/contact.dart';
@@ -32,17 +31,8 @@ class HomePage extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => AboutMe())
                       );
-
                     },
-                    child: Text(
-                      "who I am ?",
-                      style: GoogleFonts.didactGothic(
-                        fontSize: 48,
-                        color: Color(0xFFCCCCCC),
-                        letterSpacing: 2.0,
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
+                    child: Text("who I am ?", style: Theme.of(context).textTheme.headline2,),
                   ),
                 ),
                 SizedBox(
@@ -59,15 +49,7 @@ class HomePage extends StatelessWidget {
                     splashColor: Colors.transparent,
                     padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                     onPressed: () {},
-                    child: Text(
-                      "portfolio",
-                      style: GoogleFonts.didactGothic(
-                        fontSize: 48,
-                        color: Color(0xFFCCCCCC),
-                        letterSpacing: 2.0,
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
+                    child: Text("portfolio", style: Theme.of(context).textTheme.headline2,),
                   ),
                 ),
                 SizedBox(
@@ -84,15 +66,7 @@ class HomePage extends StatelessWidget {
                     highlightColor: Colors.transparent,
                     padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                     onPressed: () {},
-                    child: Text(
-                      "contact",
-                      style: GoogleFonts.didactGothic(
-                        fontSize: 48,
-                        color: Color(0xFFCCCCCC),
-                        letterSpacing: 2.0,
-                        fontWeight: FontWeight.w100,
-                      ),
-                    ),
+                    child: Text("contact", style: Theme.of(context).textTheme.headline2,),
                   ),
                 ),
               ],
